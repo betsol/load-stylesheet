@@ -16,14 +16,14 @@ If you have some compatibility issues — please [create an issue][new-issue].
 
 ## Installation
 
-### Install library with Bower
-
-`bower install --save betsol-load-stylesheet`
-
-
-### Install library with NPM
+### Install library with *npm*
 
 `npm i --save betsol-load-stylesheet`
+
+
+### Install library with *Bower*
+
+`bower install --save betsol-load-stylesheet`
 
 
 ### Add library to your page
