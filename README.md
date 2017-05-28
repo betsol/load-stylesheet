@@ -37,17 +37,24 @@ You should use minified version (`betsol-load-stylesheet.min.js`) in production.
 
 ## Usage
 
-Just call `loadStylesheet()` global function with URL and an optional callback:
+Just call `loadStylesheet()` global function with URL and an optional callback and options object:
 
 ```javascript
 var linkElement = window.loadStylesheet('/css/foo.css', function () {
   alert('CSS file loaded!');
-});
+}, options);
 ```
 
 The function will return a reference to the `<link>` DOM element
 for your convenience. You can track added links that way an remove them
 if necessary in the future.
+
+### Options
+
+The third parameter is an optional options object. The following options are supported:
+
+```insertBefore```: This should be another element which is part of your HTML's head
+
 
 ## Changelog
 

@@ -12,10 +12,11 @@
   /**
    * @param {string}   url
    * @param {function} [callback]
+   * @param {Object}   [options]
    *
    * @returns {Element}
    */
-  function loadStylesheet (url, callback) {
+  function loadStylesheet (url, callback, options) {
 
     var headElement = document.getElementsByTagName('head')[0];
     var linkElement = document.createElement('link');
@@ -34,7 +35,11 @@
       }
     }
 
-    headElement.appendChild(linkElement);
+    if (options.insertBefore) {
+      headElement.insertBefore(linkElement, options.insertBefore);
+    } else {
+      headElement.appendChild(linkElement);
+    }
 
     return linkElement;
 
