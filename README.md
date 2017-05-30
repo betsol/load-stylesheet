@@ -53,7 +53,7 @@ if necessary in the future.
 
 The third parameter is an optional options object. The following options are supported:
 
-```insertBefore```: This should be another element which is part of your HTML's head
+`insertBefore`: This should be another element which is part of your HTML's head
 
 
 ## Changelog
