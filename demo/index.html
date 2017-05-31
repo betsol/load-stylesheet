@@ -2,37 +2,37 @@
 <html>
 
 <head>
-    <title>Load Stylesheet Demo</title>
+  <title>Load Stylesheet Demo</title>
 
-    <style>
-        #test-box {
-            width: 50px;
-            height: 50px;
-            border: 3px double black;
-        }
-    </style>
+  <style>
+    #test-box {
+      width: 50px;
+      height: 50px;
+      border: 3px double black;
+    }
+  </style>
 
 </head>
 
 <body>
 
-    <div id="test-box"></div>
+  <div id="test-box"></div>
 
-    <script src="betsol-load-stylesheet.js"></script>
-    <script type="application/javascript">
-        (function (document) {
-            'use strict';
-            alert('Width: ' + document.getElementById('test-box').offsetWidth);
-            setTimeout(function () {
-                loadStylesheet('test.css', function () {
-                    alert('Stylesheet loaded! Width: ' + document.getElementById('test-box').offsetWidth);
-                }, {
-                    // insert it before the title of this HTML file
-                    insertBefore: document.getElementsByTagName('head')[0].getElementsByTagName('title')[0]
-                });
-            }, 1500);
-        })(document);
-    </script>
+  <script src="betsol-load-stylesheet.js"></script>
+  <script type="application/javascript">
+    (function (document) {
+      'use strict';
+      alert('Width: ' + document.getElementById('test-box').offsetWidth);
+      setTimeout(function () {
+        loadStylesheet('test.css', function () {
+          alert('Stylesheet loaded! Width: ' + document.getElementById('test-box').offsetWidth);
+        }, {
+          // insert it before the title of this HTML file
+          insertBefore: document.getElementsByTagName('head')[0].getElementsByTagName('title')[0]
+        });
+      }, 1500);
+    })(document);
+  </script>
 
 </body>
 

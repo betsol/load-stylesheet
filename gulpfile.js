@@ -4,20 +4,20 @@
 //==============//
 
 // Local dependencies.
-var pkg = require('./package.json');
+const pkg = require('./package.json');
 
 // Node dependencies.
-var fs = require('fs');
+const fs = require('fs');
 
 // Third-party dependencies.
-var del = require('del');
-var gulp = require('gulp');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
-var gutil = require('gulp-util');
-var concat = require('gulp-concat');
-var header = require('gulp-header');
-var serverFactory = require('spa-server');
+const del = require('del');
+const gulp = require('gulp');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+const gutil = require('gulp-util');
+const concat = require('gulp-concat');
+const header = require('gulp-header');
+const serverFactory = require('spa-server');
 
 
 //=========//
@@ -29,17 +29,15 @@ var serverFactory = require('spa-server');
 // CLEAN //
 //=======//
 
-gulp.task('clean', function (callback) {
-  del('dist', callback);
-});
+gulp.task('clean', () => del('dist'));
 
 
 //=======//
 // BUILD //
 //=======//
 
-gulp.task('build', ['clean'], function () {
-  var headerContent = fs.readFileSync('src/header.js', 'utf8');
+gulp.task('build', ['clean'], () => {
+  const headerContent = fs.readFileSync('src/header.js', 'utf8');
   return gulp
     .src([
       './src/module.js'
@@ -60,8 +58,8 @@ gulp.task('build', ['clean'], function () {
 // DEMO //
 //======//
 
-gulp.task('demo', function () {
-  var server = serverFactory.create({
+gulp.task('demo', () => {
+  const server = serverFactory.create({
     path: './demo',
     port: 1337
   });

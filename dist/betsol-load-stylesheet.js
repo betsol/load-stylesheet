@@ -1,6 +1,6 @@
 /**
  * betsol-load-stylesheet - Loads stylesheets on demand with consistent callback support
- * @version v1.0.0
+ * @version v1.1.0
  * @link https://github.com/betsol/load-stylesheet
  * @license MIT
  *
@@ -20,10 +20,11 @@
   /**
    * @param {string}   url
    * @param {function} [callback]
+   * @param {Object}   [options]
    *
    * @returns {Element}
    */
-  function loadStylesheet (url, callback) {
+  function loadStylesheet (url, callback, options) {
 
     var headElement = document.getElementsByTagName('head')[0];
     var linkElement = document.createElement('link');
@@ -42,7 +43,11 @@
       }
     }
 
-    headElement.appendChild(linkElement);
+    if (options.insertBefore) {
+      headElement.insertBefore(linkElement, options.insertBefore);
+    } else {
+      headElement.appendChild(linkElement);
+    }
 
     return linkElement;
 

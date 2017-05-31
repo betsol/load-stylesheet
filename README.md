@@ -16,14 +16,9 @@ If you have some compatibility issues — please [create an issue][new-issue].
 
 ## Installation
 
-### Install library with *npm*
+### Install library with *yarn*
 
-`npm i --save betsol-load-stylesheet`
-
-
-### Install library with *Bower*
-
-`bower install --save betsol-load-stylesheet`
+`yarn add betsol-load-stylesheet`
 
 
 ### Add library to your page
@@ -53,7 +48,7 @@ if necessary in the future.
 
 The third parameter is an optional options object. The following options are supported:
 
-`insertBefore`: This should be another element which is part of your HTML's head
+`insertBefore`: This should be another element which is part of your HTML's head.
 
 
 ## Changelog
@@ -81,7 +76,7 @@ Fork, clone, create a feature branch, commit, create a PR.
 
 Run:
 
-- `npm i` to initialize the project
+- `yarn install` to initialize the project
 - `gulp build` to re-build the dist files
 - `gulp demo` to run the demo server on port `1337`
 
@@ -100,7 +95,7 @@ Thank you!
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Slava Fomin II, BETTER SOLUTIONS
+Copyright (c) 2016-2017 Slava Fomin II, BETTER SOLUTIONS
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

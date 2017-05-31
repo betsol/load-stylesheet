@@ -1,7 +1,7 @@
 {
   "name": "betsol-load-stylesheet",
   "description": "Loads stylesheets on demand with consistent callback support",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/betsol-load-stylesheet.js",
   "ignore": [
     "demo",
